@@ -1,1 +1,77 @@
 
+
+//colors
+$dark-blue: #23445F;
+$dark-grey-blue: #51779C;
+$light-blue:  #7595B2;
+$light-grey-blue: #8FAFC7;
+$more-light-grey-blue: #D1DBE5;
+$pink: #C2A69F;
+
+
+//variable for base font-size
+$main-fs: 16px;
+$h1-fs: 62px;
+$h2-fs: 42px;
+$h3-fs: 38px;
+
+//variable for base font-family
+$lsb: "LeagueSpartanBold";
+$pdb: "PlafairDisplayBold";
+$pdr: "PlafairDisplay-Regular";
+$pb: "PoppinsBold";
+$pr: "PoppinsRegular";
+$pl: "PoppinsLight";
+
+
+//Width variables
+
+$container-width: 1224px;
+$laptop-width: 1280px;
+$desktop-width: 1024px;
+$desktop-min-width: 998px;
+$tablet-width: 768px;
+$mobile-big-width: 480px;
+$mobile-small-width: 320px;
+
+
+$small-media: "screen and (max-width: $mobile-small-width)" ;
+$medium-media: "screen and (max-width: $mobile-big-width)" ;
+$tablet-media: "screen and (max-width: $tablet-width)" ;
+$desktop-media: "screen and (max-width: $desktop-width)" ;
+$container-media: "screen and (max-width: $container-width)" ;
+$non-retina: "screen and (-webkit-max-device-pixel-ratio: 1)" ;
+$retina: "(min--moz-device-pixel-ratio: 1.5),
+                    (-o-min-device-pixel-ratio: 3/2),
+                    (-webkit-min-device-pixel-ratio: 1.5),
+                    (min-device-pixel-ratio: 1.5),
+                    (min-resolution: 144dpi),
+                    (min-resolution: 1.5dppx)" ;
+
+
+//Mixins
+
+@mixin respond-to($media) {
+	@media only screen and #{$media} {
+		@content;
+	}
+}
+
+@mixin flex-mixin($justify, $align, $flow){
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
+	flex-flow: $flow;
+}
+
+
+@mixin button-mixin($bg-color, $color, $paddings) {
+	padding: $paddings;
+	background-color: $bg-color;
+	border: 0;
+	outline: none;
+	font-weight: 600;
+	color: $color;
+	text-align: center;
+	text-transform: uppercase;
+}

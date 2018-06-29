@@ -58,7 +58,7 @@ var config = {
     server: {
         baseDir: "./build"
     },
-    tunnel: true,
+    //tunnel: true,
     host: 'localhost',
     port: 3000,
     logPrefix: "GULP"

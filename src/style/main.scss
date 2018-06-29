@@ -1,9 +1,7 @@
 @import "partials/reset";
 @import "partials/fonts";
 @import "partials/default";
-/*==================PLUGINS =================*/
-@import "partials/plugins/owl-carousel";
-@import "partials/plugins/owl-carousel-thems";
+
 /*====================MAIN PAGE===============*/
 @import "partials/main-page/intro";
 @import "partials/main-page/first";
@@ -13,7 +11,8 @@
 @import "partials/main-page/five";
 @import "partials/main-page/six";
 @import "partials/main-page/contact";
-@import "partials/main-page/footer";
+@import "partials/footer";
+@import "partials/header";
 
 
 

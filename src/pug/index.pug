@@ -2,12 +2,12 @@ include template/main-page/intro
 include template/main-page/first
 include template/main-page/second
 include template/main-page/third
-//include template/main-page/four
+include template/main-page/four
 include template/main-page/five
 include template/main-page/six
 include template/main-page/contact
 include template/footer
-//include template/header
+include template/header
 
 
 doctype html
@@ -29,20 +29,17 @@ html(lang="ru")
 		link(rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon")
 		//FAVICON:END
 	body
-
-		//+header()
+		+header()
 		+intro ()
 		+first ()
 		+second ()
 		+third ()
-		//+four ()
+		+four ()
 		+five ()
 		+six ()
 		+contact ()
 		+footer ()
 
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
-
 		script(src="js/main.js")
-		script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBGpxCwfv7Br94wILKwOy6vuVh7xLyVGAU&callback=myMap')
 
