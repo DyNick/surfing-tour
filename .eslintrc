@@ -61,7 +61,6 @@
     "no-fallthrough": 1,
     "no-floating-decimal": 0,
     "no-implicit-coercion": 1,
-    "no-invalid-this": 1,
     "no-lone-blocks": 1,
     "no-loop-func": 1,
     "no-multi-spaces": 1,
@@ -127,7 +126,6 @@
     "no-trailing-spaces": 1,
     "quote-props": [1, "consistent-as-needed"],
     "space-before-blocks": 1,
-    "space-infix-ops": 1,
     "arrow-parens": [1, "as-needed"],
     "arrow-spacing": [1, {
       "before": true,
@@ -138,9 +136,7 @@
       "after": true
     }],
     "no-useless-constructor": 1,
-    "no-var": 1,
     "prefer-rest-params": 1,
-    "prefer-template": 1,
     "template-curly-spacing": [1, "never"],
     "new-cap": 1,
     "strict": [1, "global"],

@@ -1,0 +1,141 @@
+//container style
+.carousel-container{
+	display: grid;
+	grid-template-columns: 20% 80% ;
+
+	&__description{
+		position: relative;
+		z-index: 1;
+	}
+
+	&__image-box{
+		position: relative;
+		padding: 25px;
+		box-sizing: border-box;
+
+		&__img{
+			width: 95%!important;
+			box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, .45);
+
+		}
+	}
+}
+.title-first-section{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+
+	&__first{
+		font-family: $lsb;
+		text-transform: uppercase;
+		font-size: 9px;
+		color: $blue;
+		margin-bottom: 10px;
+	}
+
+	&__second{
+		font-family: $pdb;
+		font-size: $h1-fs;
+		color: #333333;
+		width: 500px;
+		margin-bottom: 10px;
+	}
+}
+
+.text-first-section{
+	color: #8f8f8f;
+	font-size: 14px;
+	line-height: 1.7;
+	font-family: $pl;
+	width: 365px;
+}
+
+//custom carousel style
+.section-first {
+
+	.owl-nav {
+		position: absolute;
+		width: 75px;
+		bottom: -5px;
+	}
+
+	.owl-prev {
+		float: left;
+		font-size: 20px;
+		text-transform: uppercase;
+		padding: 20px;
+		height: 18px;
+		width: 11px;
+		background-image: url(../img/arrow-left.png)!important;
+
+		span{
+			display: none;
+		}
+	}
+
+	.owl-next {
+		float: right;
+		font-size: 20px;
+		text-transform: uppercase;
+		padding: 20px;
+		height: 18px;
+		width: 11px;
+		background-image: url(../img/arrow-right.png)!important;
+		span{
+			display: none;
+		}
+	}
+
+	.owl-dots {
+		counter-reset: slides-num;
+		font-family: $lsb;
+		position: absolute;
+		bottom: -10px;
+		left: 30px;
+		margin-top: 15px;
+		color: $blue;
+
+		&:after {
+			content: counter(slides-num);
+			display: inline-block;
+			font-size: 9px;
+			font-weight: 700;
+			vertical-align: top;
+			padding-left: 5px;
+			color: #000;
+		}
+	}
+
+	.owl-dot {
+		display: inline-block;
+		counter-increment: slides-num;
+		margin-right: 5px;
+
+		span {
+			display: none;
+		}
+		&:before {
+			content: "/";
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 9px;
+			position: absolute;
+			left: 5px;
+			color: #8f8f8f;
+			top: 0px
+		}
+		&.active {
+
+			&:before {
+				content: counter(slides-num);
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 9px;
+				position: absolute;
+				left: -6px;
+				color: blue;
+				top: 0;
+			}
+		}
+	}
+}

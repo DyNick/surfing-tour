@@ -4,6 +4,7 @@
 $dark-blue: #23445F;
 $dark-grey-blue: #51779C;
 $light-blue:  #7595B2;
+$blue: #5da8ef;
 $light-grey-blue: #8FAFC7;
 $more-light-grey-blue: #D1DBE5;
 $pink: #C2A69F;
@@ -17,8 +18,8 @@ $h3-fs: 38px;
 
 //variable for base font-family
 $lsb: "LeagueSpartanBold";
-$pdb: "PlafairDisplayBold";
-$pdr: "PlafairDisplay-Regular";
+$pdb: "PlayfairDisplayBold";
+$pdr: "PlayfairDisplay-Regular";
 $pb: "PoppinsBold";
 $pr: "PoppinsRegular";
 $pl: "PoppinsLight";
@@ -26,7 +27,7 @@ $pl: "PoppinsLight";
 
 //Width variables
 
-$container-width: 1224px;
+$container-width: 1200px;
 $laptop-width: 1280px;
 $desktop-width: 1024px;
 $desktop-min-width: 998px;
@@ -74,4 +75,11 @@ $retina: "(min--moz-device-pixel-ratio: 1.5),
 	color: $color;
 	text-align: center;
 	text-transform: uppercase;
+}
+
+
+//default style
+.container{
+	width: $container-width;
+	margin: 0 auto;
 }

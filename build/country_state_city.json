@@ -1,0 +1,110 @@
+[
+  {
+    "id":"1",
+    "name":"USA",
+    "parent_id":"0"
+  },
+  {
+    "id":"2",
+    "name":"Australia",
+    "parent_id":"0"
+  },
+  {
+    "id":"3",
+    "name":"Portugal",
+    "parent_id":"0"
+  },
+  {
+    "id":"4",
+    "name":"Hawaii",
+    "parent_id":"1"
+  },
+  {
+    "id":"5",
+    "name":"California",
+    "parent_id":"1"
+  },
+  {
+    "id":"6",
+    "name":"New Jersey",
+    "parent_id":"1"
+  },
+  {
+    "id":"7",
+    "name":"South Australia",
+    "parent_id":"2"
+  },
+  {
+    "id":"8",
+    "name":"Victoria",
+    "parent_id":"2"
+  },
+  {
+    "id":"9",
+    "name":"Algarve",
+    "parent_id":"3"
+  },
+  {
+    "id":"10",
+    "name":"Minho",
+    "parent_id":"3"
+  },
+
+  {
+    "id":"11",
+    "name":"Baixo Alentejo",
+    "parent_id":"3"
+  },
+  {
+    "id":"12",
+    "name":"Honolulu",
+    "parent_id":"4"
+  },
+  {
+    "id":"13",
+    "name":"Maui",
+    "parent_id":"4"
+  },
+  {
+    "id":"14",
+    "name":"San Francisco",
+    "parent_id":"5"
+  },
+  {
+    "id":"15",
+    "name":"Cap May",
+    "parent_id":"6"
+  },
+  {
+    "id":"16",
+    "name":"Huntsville",
+    "parent_id":"7"
+  },
+  {
+    "id":"17",
+    "name":"Port Lincoln",
+    "parent_id":"8"
+  },
+  {
+    "id":"18",
+    "name":"Melbourne",
+    "parent_id":"8"
+  },
+  {
+    "id":"19",
+    "name":"Faro",
+    "parent_id":"9"
+  },
+  {
+    "id":"20",
+    "name":"Walled",
+    "parent_id":"10"
+  },
+
+  {
+    "id":"21",
+    "name":"Beira Alta",
+    "parent_id":"11"
+  }
+
+]

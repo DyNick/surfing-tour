@@ -1,0 +1,90 @@
+//container style
+.container--mainform{
+	display: grid;
+	grid-template-columns: 20% 30% 30%;
+}
+//form style
+.main-form{
+	border: 1px solid #8f8f8f;
+	padding: 20px;
+	box-sizing: border-box;
+}
+.main-form__block{
+	display: block;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+	background: transparent;
+	border: none;
+	.error {
+		border-bottom-color: red;
+		animation: error-animate .5s;
+	}
+	&:before{
+		background: none;
+		border-color: #8f8f8f transparent transparent transparent;
+		border-style: solid;
+		border-width: 6px 6px 0;
+		content: "";
+		display: block;
+		height: 0;
+		pointer-events: none;
+		position: absolute;
+		right: .8rem;
+		bottom: 13px;
+		width: 0;
+		z-index: 1;
+	}
+}
+@keyframes error-animate {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+
+.main-form__block > select + label {
+	position: absolute;
+	font-family: $lsb;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: $blue;
+	left: 0px;
+	top: 70%;
+	transform: translateY(-50%);
+	pointer-events: none;
+	transition: .15s ease-out all;
+}
+.main-form__block__select:focus + label,
+select.focusFancy + label{
+	top: 10px;
+	font-family: $lsb;
+	font-size: 9px;
+	color: $blue;
+}
+
+select {
+	appearance: none;
+	background: transparent;
+	border: 0 none;
+	border-radius: 0 !important;
+	box-shadow: none;
+	color: #8f8f8f;
+	cursor: pointer;
+	font-family: $lsb;
+	line-height: 1.2;
+	margin: 0 auto;
+	outline: none;
+	text-overflow: ellipsis;
+	width: 100%;
+	user-select: none;
+	border-bottom: 1px solid #8f8f8f;
+	font-size: 12px;
+	padding: 1.6rem 0  .4rem 0;
+	padding-right: 2.4rem;
+}
+
+// image style

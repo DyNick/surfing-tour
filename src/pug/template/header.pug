@@ -1,14 +1,23 @@
 
 -var nav = [{url: '#', name: 'STORIES'}, {url: '#', name: 'EVENTS'},{url: '#', name: 'PLACES'},{url: '#', name: 'BOARD'} ];
-mixin navItem(url, name, current)
+mixin navItem(url, name)
 
-	li.nav__list__item(class={active: current})
+	li.nav-list__item
 		a.nav-list__item__link(href=url)= name
 
 mixin header()
 	header.header
-		nav.navigation
-			ul.nav-list
-				each i in nav
-					+navItem(i.url, i.name, i.url )
-			block content
+		div.container.container--header
+			nav.navigation
+				a.logo(href='#')
+					div.logo-box
+						img.logo-box__image(src='img/logo.png')
+						span.logo-box__text YOUR
+							br
+							|SURFING
+							br
+							|TOUR
+				ul.nav-list
+					each i in nav
+						+navItem(i.url, i.name, i.url )
+				block content

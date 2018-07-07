@@ -5,30 +5,196 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/plugins/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/plugins/owl.theme.default.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <!-- FAVICON-->
-    <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel=" icon" type="image/x-icon" href="favicon.ico">
     <!--FAVICON:END-->
   </head>
   <body>
     <header class="header">
-      <nav class="navigation">
-        <ul class="nav-list">
-          <li class="nav__list__item active"><a class="nav-list__item__link" href="#">STORIES</a></li>
-          <li class="nav__list__item active"><a class="nav-list__item__link" href="#">EVENTS</a></li>
-          <li class="nav__list__item active"><a class="nav-list__item__link" href="#">PLACES</a></li>
-          <li class="nav__list__item active"><a class="nav-list__item__link" href="#">BOARD</a></li>
-        </ul>
-      </nav>
+      <div class="container container--header">
+        <nav class="navigation"><a class="logo" href="#">
+            <div class="logo-box"><img class="logo-box__image" src="img/logo.png"/><span class="logo-box__text">YOUR<br/>SURFING<br/>TOUR</span></div></a>
+          <ul class="nav-list">
+            <li class="nav-list__item"><a class="nav-list__item__link" href="#">STORIES</a></li>
+            <li class="nav-list__item"><a class="nav-list__item__link" href="#">EVENTS</a></li>
+            <li class="nav-list__item"><a class="nav-list__item__link" href="#">PLACES</a></li>
+            <li class="nav-list__item"><a class="nav-list__item__link" href="#">BOARD</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <section class="header"></section>
-    <section class="section-first"></section>
-    <section class="section-second"></section>
-    <section class="section-third"></section>
-    <section class="section-four"></section>
+    <section class="section-first">
+      <div class="container container--first owl-carousel">
+        <div class="carousel-container">
+          <div class="carousel-container__description">
+            <div class="title-first-section">
+              <div class="title-first-section__first">YOUR</div>
+              <h1 class="title-first-section__second">Beautiful Escape</h1>
+              <p class="text-first-section">
+                One of the greatest things about the sport of surfing is that you need only three things: your body,a surfboard, and a wave.</p>
+            </div>
+          </div>
+          <div class="carousel-container__image-box"><img class="carousel-container__image-box__img" src="img/main-page/first/first-section-item1.jpg"/></div>
+        </div>
+        <div class="carousel-container">
+          <div class="carousel-container__description">
+            <div class="title-first-section">
+              <div class="title-first-section__first">YOUR</div>
+              <h1 class="title-first-section__second">Beautiful Escape</h1>
+              <p class="text-first-section">
+                One of the greatest things about the sport of surfing is that you need only three things: your body,a surfboard, and a wave.</p>
+            </div>
+          </div>
+          <div class="carousel-container__image-box"><img class="carousel-container__image-box__img" src="img/main-page/first/first-section-item1.jpg"/></div>
+        </div>
+      </div>
+    </section>
+    <section class="mainform">
+      <div class="vertical-line">
+        <div class="vertical-line__body"></div>
+      </div>
+      <div class="container container--mainform">
+        <div class="mainform-content">
+          <form class="main-form" onsubmit="return false">
+            <h2>SEARCH TOUR</h2>
+            <p>Find your dream tour today!</p>
+            <div class="main-form__block">
+              <select class="main-form__block__select form-signup" id="country" name="country">
+                <option value=""></option>
+              </select>
+              <label for="country">Select Country</label>
+            </div>
+            <div class="main-form__block">
+              <select class="main-form__block__select form-signup" id="state" name="state">
+                <option value=""></option>
+              </select>
+              <label for="state">Select State</label>
+            </div>
+            <div class="main-form__block">
+              <select class="main-form__block__select form-signup" id="city" name="city">
+                <option value=""></option>
+              </select>
+              <label for="city">Select City</label>
+            </div>
+            <div class="main-form__block">
+              <select class="main-form__block__select form-signup" id="date" name="date">
+                <option value=""></option>
+                <option value="">January</option>
+                <option value="">February</option>
+                <option value="">March</option>
+                <option value="">April</option>
+                <option value="">May</option>
+                <option value="">June</option>
+                <option value="">July</option>
+                <option value="">August</option>
+                <option value="">September</option>
+                <option value="">October</option>
+                <option value="">November</option>
+                <option value="">December</option>
+              </select>
+              <label for="date">Select Date</label>
+            </div>
+            <button class="search-main-form" type="submit">find tour</button>
+          </form>
+        </div>
+        <div class="mainform-content"></div>
+        <div class="mainform-content"></div>
+      </div>
+    </section>
+    <section class="section-second">
+      <div class="container container--second">
+        <p class="container-second-description">Surfing is the most blissful experience you can have<br/>on this planet, a taste of heaven.</p>
+        <p class="container-second-description-name">John McCarthy</p>
+        <div class="vertical-line">
+          <div class="vertical-line__body"></div>
+        </div>
+      </div>
+      <div class="container container--second-next">
+        <div class="video-image-block"><img class="video-image-block__img" src="img/main-page/second/section-third-img1.jpg"/>
+          <div class="video-image-block__text">By better understanding the various aspects of surfing,<br/>of surfing, you will improve faster and have<br/>more fun in the water.</div><a class="video-image-block__link">Read More</a>
+        </div>
+        <div class="video-block">
+          <div class="youtube video-wrapper" id="5ZwRbIdB8Fo"><img class="video-wrapper-play" src="img/main-page/second/play.png"/><img class="video-wrapper-img" src="img/main-page/second/section-third-img2.jpg"/></div>
+        </div>
+      </div>
+    </section>
+    <section class="section-third">
+      <div class="container container--third-title">
+        <p class="sub-title-section">Take a Look at Our</p>
+        <h2 class="title-section">Most popular tour</h2>
+      </div>
+      <div class="container container--third-body">
+        <div class="container-box-tour container-box-tour--vertical">
+          <div class="tour-item"><img class="tour-item__image" src="img/main-page/tours/tour1.jpg"/></div>
+          <div class="tour-item"><img class="tour-item__image" src="img/main-page/tours/tour2.jpg"/></div>
+          <!--div.container-box-tour__one-item-->
+          <div class="tour-item"><img class="tour-item__image" src="img/main-page/tours/tour5.jpg"/></div>
+        </div>
+        <div class="container-box-tour container-box-tour--horizontal">
+          <div class="tour-item"><img class="tour-item__image" src="img/main-page/tours/tour8.jpeg"/></div>
+          <div class="tour-item"><img class="tour-item__image" src="img/main-page/tours/tour4.jpg"/></div>
+          <div class="tour-item"><img class="tour-item__image" src="img/main-page/tours/tour6.jpg"/></div>
+        </div>
+      </div>
+    </section>
+    <section class="section-four">
+      <div class="container container--tour">
+        <ul class="cards">
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__image card__image--fence"><img class="card__image__img" src=""/>
+                <div class="strs-box"><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/></div>
+                <button class="btn btn--block card__btn">MORE DETAILS</button>
+              </div>
+              <div class="card__content">
+                <div class="card__title">Flex</div>
+                <p class="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third</p>
+              </div>
+            </div>
+          </li>
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__image card__image--river"><img class="card__image__img" src="https://australiansurftours.com.au/wp-content/uploads/2017/11/istock-surfer_.jpg"/></div>
+              <div class="strs-box"><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/></div>
+              <button class="btn btn--block card__btn">MORE DETAILS</button>
+              <div class="card__content">
+                <div class="card__title">Flex Grow</div>
+                <p class="card__text"></p>This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a
+                proportion. It dictates what amount of the available space inside the flex container the item should take up.
+              </div>
+            </div>
+          </li>
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__image card__image--record"><img class="card__image__img" src=""/>
+                <div class="strs-box"><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/></div>
+                <button class="btn btn--block card__btn">MORE DETAILS</button>
+              </div>
+              <div class="card__content">
+                <div class="card__title">Flex Shrink</div>
+                <p class="card__text">This defines the ability for a flex item to shrink if necessary. Negative numbers are invalid.</p>
+              </div>
+            </div>
+          </li>
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__image card__image--flowers"><img class="card__image__img" src="http://www.eatplaylovetravel.com.au/wp-content/uploads/2015/03/woolamai-beach.jpg"/>
+                <div class="strs-box"><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/></div>
+                <button class="btn btn--block card__btn">MORE DETAILS</button>
+              </div>
+              <div class="card__content">
+                <div class="card__title">Flex Basis</div>
+                <p class="card__text">This defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
     <section class="section-five">
       <div class="container"></div>
     </section>
@@ -83,6 +249,7 @@
       <div class="container"></div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/plugins/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

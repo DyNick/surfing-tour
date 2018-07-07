@@ -1,0 +1,47 @@
+mixin mainform
+	section.mainform
+		div.vertical-line
+			div.vertical-line__body
+		div.container.container--mainform
+			div.mainform-content
+				form.main-form(onsubmit="return false")
+					h2 SEARCH TOUR
+					p Find your dream tour today!
+					div.main-form__block
+						select#country.main-form__block__select.form-signup(name='country')
+							option(value='')
+						label(for='country') Select Country
+					div.main-form__block
+						select#state.main-form__block__select.form-signup(name='state')
+							option(value='')
+						label(for='state') Select State
+
+					div.main-form__block
+						select#city.main-form__block__select.form-signup(name='city')
+							option(value='')
+						label(for='city') Select City
+
+					div.main-form__block
+						select#date.main-form__block__select.form-signup(name='date')
+							option(value='')
+							option(value='') January
+							option(value='') February
+							option(value='') March
+							option(value='') April
+							option(value='') May
+							option(value='') June
+							option(value='') July
+							option(value='') August
+							option(value='') September
+							option(value='') October
+							option(value='') November
+							option(value='') December
+						label(for='date') Select Date
+					button.search-main-form(type='submit') find tour
+
+			div.mainform-content
+
+			div.mainform-content
+
+
+
