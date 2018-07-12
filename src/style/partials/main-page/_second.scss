@@ -1,5 +1,5 @@
 .section-second {
-	padding-top: 130px;
+	padding-top: 65px;
 	padding-bottom: 130px;
 }
 // text style
@@ -54,6 +54,7 @@
 		margin-bottom: 10px;
 		position: relative;
 		margin-left: 65px;
+		letter-spacing: 2px;
 		&:hover{
 			color: $blue;
 			cursor: pointer;

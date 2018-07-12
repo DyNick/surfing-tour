@@ -1,18 +1,22 @@
 //container style
 .container--mainform{
-	display: grid;
-	grid-template-columns: 20% 30% 30%;
+	@include flex-mixin(center,center,column);
+}
+.mainform-content{
+	width: 90%;
 }
 //form style
 .main-form{
 	border: 1px solid #8f8f8f;
 	padding: 20px;
 	box-sizing: border-box;
+	@include flex-mixin(space-betweean,center,row);
+
 }
 .main-form__block{
 	display: block;
 	position: relative;
-	width: 100%;
+	width: 45%;
 	z-index: 1;
 	background: transparent;
 	border: none;
@@ -24,14 +28,14 @@
 		background: none;
 		border-color: #8f8f8f transparent transparent transparent;
 		border-style: solid;
-		border-width: 6px 6px 0;
+		border-width: 5px 3px 0;
 		content: "";
 		display: block;
 		height: 0;
 		pointer-events: none;
 		position: absolute;
-		right: .8rem;
-		bottom: 13px;
+		right: 10%;
+		bottom: 8px;
 		width: 0;
 		z-index: 1;
 	}
@@ -44,12 +48,60 @@
 		width: 100%;
 	}
 }
-
+.search-main-form{
+	width: 40%;
+	height: 30px;
+	text-transform: uppercase;
+	border: 1px solid $blue;
+	box-sizing: border-box;
+	background: transparent;
+	color: $blue;
+	position: relative;
+	line-height: 30px;
+	transition: .3s ease all;
+	&:before{
+		content: "";
+		display: block;
+		position: absolute;
+		transition: .3s ease all;
+		top: 0;
+		bottom: 0;
+		width: 0%;
+		left: 0;
+		background-color: $blue;
+		z-index: -1;
+	}
+	&:after{
+		content: "";
+		display: block;
+		position: absolute;
+		transition: .3s ease all;
+		top: 0;
+		bottom: 0;
+		width: 0;
+		right: 0;
+		background-color: $blue;
+		z-index: -1;
+	}
+}
+.search-main-form:hover{
+	color: #fff;
+	z-index: 1;
+	cursor: pointer;
+}
+.search-main-form:hover:before{
+	width: 50%;
+	transition: .3s ease all;
+}
+.search-main-form:hover:after{
+	width: 50%;
+	transition: .3s ease all;
+}
 
 .main-form__block > select + label {
 	position: absolute;
 	font-family: $lsb;
-	font-size: 12px;
+	font-size: 9px;
 	text-transform: uppercase;
 	color: $blue;
 	left: 0px;
@@ -79,12 +131,20 @@ select {
 	margin: 0 auto;
 	outline: none;
 	text-overflow: ellipsis;
-	width: 100%;
+	width: 90%;
 	user-select: none;
 	border-bottom: 1px solid #8f8f8f;
-	font-size: 12px;
-	padding: 1.6rem 0  .4rem 0;
-	padding-right: 2.4rem;
+	font-size: 9px;
+	padding: 17px 20px 3px 0;
+
 }
 
 // image style
+.mainform-content{
+	&__image-box{
+		width: 100%;
+		&__img{
+			width: 100%;
+		}
+	}
+}

@@ -1,3 +1,23 @@
+-var nav = [{url: '#', name: 'STORIES'}, {url: '#', name: 'EVENTS'},{url: '#', name: 'PLACES'},{url: '#', name: 'BOARD'} ];
+mixin navItem(url, name)
+	li.nav-list__item
+		a.nav-list__item__link(href=url)= name
 mixin footer
 	footer.section-footer
 		div.container
+			nav.navigation.navigation--footer
+				a.logo(href='#')
+					div.logo-box
+						img.logo-box__image(src='img/logo.png')
+						span.logo-box__text YOUR
+							br
+							| SURFING
+							br
+							| TOUR
+				ul.nav-list
+					each i in nav
+						+navItem(i.url, i.name, i.url )
+				block content
+				div.copyright  2018 copyright
+					br
+					|by DyNick

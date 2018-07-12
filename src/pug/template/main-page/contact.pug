@@ -1,61 +1,15 @@
-mixin input(type, label)
-	.input-container
-		input(type='#{type}' id='#{label}' required)
-		label(for='#{label}')=label
-		.bar
-mixin textarea(rows,cols ,label)
-	.input-container
-		textarea(rows='#{rows}' cols='#{cols}' id='#{label}' required)
-		label(for='#{label}')=label
-mixin button(text)
-	.button-container
-		button
-			span=text
-
 
 mixin contact ()
-	//section.section-contact
-		div.container.container--contact
-			div.container-inner
-				.column.column--two-items
+	section.section-contact
+		div.contact
+			div.contact__map
+				#googleMap.google-map(style='width:100%;height:400px;')
+			div.contact__address
+				h5.contact__address__title Our Camp
+				p.contact__address__description CA 91932, USA
+					br
+					|Imperial Beach
+					br
+					|560 Silver Strand Blvd
 
-
-
-					.form-block
-						.card
-							h1.title Register
-								.close
-							form
-								+input('text', 'Name')
-								+input('email', 'Email')
-								+input('text', 'Subject')
-								+textarea('30','5' ,'Message')
-								+button('Send message')
-
-
-					//.row
-						.col-xs-12.col-sm-12.col-md-12.col-lg-12.text-center
-							h2 Contact
-					//.row
-						.col-xs-6.col-sm-6.col-md-6.col-lg-6.col-xs-offset-3
-							form#contact-form.form(action='#', method='POST', role='form')
-								.form-group
-									label.form-label(for='name') Your Name
-									input#name.form-control(type='text', name='name', placeholder='Your name', tabindex='1', required='')
-								.form-group
-									label.form-label(for='email') Your Email
-									input#email.form-control(type='email', name='email', placeholder='Your Email', tabindex='2', required='')
-								.form-group
-									label.form-label(for='subject') Subject
-									input#subject.form-control(type='text', name='subject', placeholder='Subject', tabindex='3')
-								.form-group
-									label.form-label(for='message') Message
-									textarea#message.form-control(rows='5', cols='50', name='message', placeholder='Message...', tabindex='4', required='')
-								.text-center
-									button.btn-main(type='submit') Send Message
-				.column.column--two-items
-					h2.column-header lorem
-					p.column-text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-					| with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-					#googleMap.google-map(style='width:100%;height:400px;')
-					a.btn-main(href='#') button
+				a.column-link.column-link--contact(href='#') Get in Touch

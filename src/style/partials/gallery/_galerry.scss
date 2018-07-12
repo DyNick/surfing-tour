@@ -1,0 +1,137 @@
+.container--gallery{
+	padding-top: 150px;
+	width: 1080px;
+	@media(max-width:1080px ){
+		width: 100%;
+	}
+	h1{
+		margin:0 auto;
+		text-align: center;
+		&:before, .glitch:before{
+			left: 95px;
+		}
+
+		&:after, .glitch:after{
+			left: 95px;
+		}
+		@media(max-width:480px ){
+			width: auto;
+		}
+	}
+}
+
+.article-loop{
+	h2{
+		text-align: center;
+		padding: 20px;
+	}
+}
+.pagination {
+	display: block;
+	width: 75%;
+	margin: 30px auto;
+	text-align: center;
+	padding-bottom: 30px;
+	&:after {
+		content: '';
+		clear: both;
+	}
+}
+
+.pagination-button {
+	display: inline-block;
+	padding: 5px 10px;
+	border: 1px solid #e0e0e0;
+	background-color: #eee;
+	color: #333;
+	cursor: pointer;
+	transition: background 0.1s, color 0.1s;
+
+	&:hover {
+		background-color: #ddd;
+		color: #fff;
+	}
+
+	&.active {
+		background-color: #bbb;
+		border-color: #bbb;
+		color: #fff;
+	}
+
+	$border-radius: 18px;
+
+	&:first-of-type {
+		//border-radius: $border-radius 0 0 $border-radius;
+	}
+
+	&:last-of-type {
+		//border-radius: 0 $border-radius $border-radius 0;
+	}
+}
+
+/* arbitrary styles */
+.heading { text-align: center; max-width: 500px; margin: 20px auto; }
+
+.article-loop {
+	display: block;
+	width: 90%;
+	box-sizing: border-box;
+	margin: 10px auto;
+	border: 1px solid #ddd;
+	background-color: #ededed;
+}
+/*================IMAGE===========*/
+.article-loop__image-container{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap:wrap;
+
+
+}
+.article-loop__image-block{
+	margin-bottom: 20px;
+	width: 300px;
+	height: 300px;
+	&__item{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.popup {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10;
+	text-align: center;
+}
+
+.popup_bg {
+	background:rgba(0,0,0,0.8);
+	position:absolute;
+	z-index:1;
+	height:100%;
+	width:100%;
+}
+
+
+.popup_img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 1;
+	width: 450px;
+	@media (max-width: $mobile-big-width) {
+		width: 95%;
+	}
+}
+section.section-gallery {
+	margin-bottom: 115px;
+}

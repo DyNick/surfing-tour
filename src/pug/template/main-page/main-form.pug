@@ -3,10 +3,14 @@ mixin mainform
 		div.vertical-line
 			div.vertical-line__body
 		div.container.container--mainform
+			p.container-second-description Surfing is the most blissful experience you can have
+				br
+				| on this planet, a taste of heaven.
+			p.container-second-description-name
+			h2.title-section SEARCH TOUR
+			p.sub-title-section-second Find your dream tour today!
 			div.mainform-content
 				form.main-form(onsubmit="return false")
-					h2 SEARCH TOUR
-					p Find your dream tour today!
 					div.main-form__block
 						select#country.main-form__block__select.form-signup(name='country')
 							option(value='')
@@ -39,9 +43,12 @@ mixin mainform
 						label(for='date') Select Date
 					button.search-main-form(type='submit') find tour
 
-			div.mainform-content
-
-			div.mainform-content
+			//div.mainform-content
+				div.mainform-content__image-box
+					img.mainform-content__image-box__img(src='img/main-page/tours/tour1.jpg')
+			//div.mainform-content
+				div.mainform-content__image-box
+					img.mainform-content__image-box__img(src='img/main-page/tours/tour2.jpg')
 
 
 

@@ -1,10 +1,18 @@
 //section-title
-
+.sub-title-section-second{
+	text-align: center;
+	font-family: $pdr;
+	font-size: 26px;
+	line-height: 38px;
+	color: #333;
+	margin-bottom: 65px;
+}
 .title-section{
 	font-family: $pdb;
 	font-size: 42px;
 	text-align: center;
 	color: #333;
+	margin-bottom: 20px;
 }
 .sub-title-section{
 	font-family: $lsb;

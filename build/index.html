@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Restaurant</title>
+    <title>YOUR SURF TOUR</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -24,6 +24,14 @@
             <li class="nav-list__item"><a class="nav-list__item__link" href="#">PLACES</a></li>
             <li class="nav-list__item"><a class="nav-list__item__link" href="#">BOARD</a></li>
           </ul>
+          <div class="contain-form" style="padding: 0">
+            <form class="search-form" role="search-form">
+              <div class="search-block-input">
+                <input class="search-block__input" id="txt-search" type="search" placeholder="Type your search character"/>
+              </div>
+            </form>
+            <div class="filter-record" id="filter-records"></div>
+          </div>
         </nav>
       </div>
     </header>
@@ -58,10 +66,12 @@
         <div class="vertical-line__body"></div>
       </div>
       <div class="container container--mainform">
+        <p class="container-second-description">Surfing is the most blissful experience you can have<br/>on this planet, a taste of heaven.</p>
+        <p class="container-second-description-name"></p>
+        <h2 class="title-section">SEARCH TOUR</h2>
+        <p class="sub-title-section-second">Find your dream tour today!</p>
         <div class="mainform-content">
           <form class="main-form" onsubmit="return false">
-            <h2>SEARCH TOUR</h2>
-            <p>Find your dream tour today!</p>
             <div class="main-form__block">
               <select class="main-form__block__select form-signup" id="country" name="country">
                 <option value=""></option>
@@ -101,8 +111,14 @@
             <button class="search-main-form" type="submit">find tour</button>
           </form>
         </div>
-        <div class="mainform-content"></div>
-        <div class="mainform-content"></div>
+        <!--div.mainform-content
+        div.mainform-content__image-box
+        	img.mainform-content__image-box__img(src='img/main-page/tours/tour1.jpg')
+        -->
+        <!--div.mainform-content
+        div.mainform-content__image-box
+        	img.mainform-content__image-box__img(src='img/main-page/tours/tour2.jpg')
+        -->
       </div>
     </section>
     <section class="section-second">
@@ -122,73 +138,79 @@
         </div>
       </div>
     </section>
-    <section class="section-third">
-      <div class="container container--third-title">
-        <p class="sub-title-section">Take a Look at Our</p>
-        <h2 class="title-section">Most popular tour</h2>
-      </div>
-      <div class="container container--third-body">
-        <div class="container-box-tour container-box-tour--vertical">
-          <div class="tour-item"><img class="tour-item__image" src="img/main-page/tours/tour1.jpg"/></div>
-          <div class="tour-item"><img class="tour-item__image" src="img/main-page/tours/tour2.jpg"/></div>
-          <!--div.container-box-tour__one-item-->
-          <div class="tour-item"><img class="tour-item__image" src="img/main-page/tours/tour5.jpg"/></div>
-        </div>
-        <div class="container-box-tour container-box-tour--horizontal">
-          <div class="tour-item"><img class="tour-item__image" src="img/main-page/tours/tour8.jpeg"/></div>
-          <div class="tour-item"><img class="tour-item__image" src="img/main-page/tours/tour4.jpg"/></div>
-          <div class="tour-item"><img class="tour-item__image" src="img/main-page/tours/tour6.jpg"/></div>
-        </div>
-      </div>
-    </section>
+    <!--+third ()-->
     <section class="section-four">
       <div class="container container--tour">
+        <p class="sub-title-section">Take a Look at Our</p>
+        <h2 class="title-section">Most popular tour</h2>
         <ul class="cards">
           <li class="cards__item">
             <div class="card">
-              <div class="card__image card__image--fence"><img class="card__image__img" src=""/>
-                <div class="strs-box"><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/></div>
+              <div class="card__image card__image--fence"><img class="card__image__img" src="img/main-page/tours/tour1.jpg"/>
+                <div class="strs-box"><img class="strs-box__img" src="img/main-page/star-yellow.png"/><img class="strs-box__img" src="img/main-page/star-yellow.png"/><img class="strs-box__img" src="img/main-page/star-yellow.png"/><img class="strs-box__img" src="img/main-page/star-yellow.png"/><img class="strs-box__img" src="img/main-page/star-yellow.png"/></div>
                 <button class="btn btn--block card__btn">MORE DETAILS</button>
               </div>
               <div class="card__content">
-                <div class="card__title">Flex</div>
+                <div class="card__title">Some title</div>
                 <p class="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third</p>
               </div>
             </div>
           </li>
           <li class="cards__item">
             <div class="card">
-              <div class="card__image card__image--river"><img class="card__image__img" src="https://australiansurftours.com.au/wp-content/uploads/2017/11/istock-surfer_.jpg"/></div>
-              <div class="strs-box"><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/></div>
+              <div class="card__image card__image--river"><img class="card__image__img" src="img/main-page/tours/tour2.jpg"/></div>
+              <div class="strs-box"><img class="strs-box__img" src="img/main-page/star-yellow.png"/><img class="strs-box__img" src="img/main-page/star-yellow.png"/><img class="strs-box__img" src="img/main-page/star-yellow.png"/><img class="strs-box__img" src="img/main-page/star-yellow.png"/><img class="strs-box__img" src="img/main-page/star-yellow.png"/></div>
               <button class="btn btn--block card__btn">MORE DETAILS</button>
               <div class="card__content">
-                <div class="card__title">Flex Grow</div>
-                <p class="card__text"></p>This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a
-                proportion. It dictates what amount of the available space inside the flex container the item should take up.
+                <div class="card__title">Some title</div>
+                <p class="card__text">This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a</p>
               </div>
             </div>
           </li>
           <li class="cards__item">
             <div class="card">
-              <div class="card__image card__image--record"><img class="card__image__img" src=""/>
-                <div class="strs-box"><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/></div>
+              <div class="card__image card__image--record"><img class="card__image__img" src="img/main-page/tours/tour3.jpg"/>
+                <div class="strs-box"><img class="strs-box__img" src="img/main-page/star-yellow.png"/><img class="strs-box__img" src="img/main-page/star-yellow.png"/><img class="strs-box__img" src="img/main-page/star-yellow.png"/><img class="strs-box__img" src="img/main-page/star-yellow.png"/><img class="strs-box__img" src="img/main-page/star-yellow.png"/></div>
                 <button class="btn btn--block card__btn">MORE DETAILS</button>
               </div>
               <div class="card__content">
-                <div class="card__title">Flex Shrink</div>
+                <div class="card__title">Some title</div>
                 <p class="card__text">This defines the ability for a flex item to shrink if necessary. Negative numbers are invalid.</p>
               </div>
             </div>
           </li>
           <li class="cards__item">
             <div class="card">
-              <div class="card__image card__image--flowers"><img class="card__image__img" src="http://www.eatplaylovetravel.com.au/wp-content/uploads/2015/03/woolamai-beach.jpg"/>
-                <div class="strs-box"><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/><img class="strs-box__img" src="http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png"/></div>
+              <div class="card__image card__image--flowers"><img class="card__image__img" src="img/main-page/tours/tour4.jpg"/>
+                <div class="strs-box"><img class="strs-box__img" src="img/main-page/star-yellow.png"/><img class="strs-box__img" src="img/main-page/star-yellow.png"/><img class="strs-box__img" src="img/main-page/star-yellow.png"/><img class="strs-box__img" src="img/main-page/star-yellow.png"/><img class="strs-box__img" src="img/main-page/star-yellow.png"/></div>
                 <button class="btn btn--block card__btn">MORE DETAILS</button>
               </div>
               <div class="card__content">
-                <div class="card__title">Flex Basis</div>
+                <div class="card__title">Some title</div>
                 <p class="card__text">This defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, </p>
+              </div>
+            </div>
+          </li>
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__image card__image--fence"><img class="card__image__img" src="img/main-page/tours/tour5.jpg"/>
+                <div class="strs-box"><img class="strs-box__img" src="img/main-page/star-yellow.png"/><img class="strs-box__img" src="img/main-page/star-yellow.png"/><img class="strs-box__img" src="img/main-page/star-yellow.png"/><img class="strs-box__img" src="img/main-page/star-yellow.png"/><img class="strs-box__img" src="img/main-page/star-yellow.png"/></div>
+                <button class="btn btn--block card__btn">MORE DETAILS</button>
+              </div>
+              <div class="card__content">
+                <div class="card__title">Some title</div>
+                <p class="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third</p>
+              </div>
+            </div>
+          </li>
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__image card__image--river"><img class="card__image__img" src="img/main-page/tours/tour6.jpg"/></div>
+              <div class="strs-box"><img class="strs-box__img" src="img/main-page/star-yellow.png"/><img class="strs-box__img" src="img/main-page/star-yellow.png"/><img class="strs-box__img" src="img/main-page/star-yellow.png"/><img class="strs-box__img" src="img/main-page/star-yellow.png"/><img class="strs-box__img" src="img/main-page/star-yellow.png"/></div>
+              <button class="btn btn--block card__btn">MORE DETAILS</button>
+              <div class="card__content">
+                <div class="card__title">Some title</div>
+                <p class="card__text">This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a</p>
               </div>
             </div>
           </li>
@@ -196,60 +218,73 @@
       </div>
     </section>
     <section class="section-five">
-      <div class="container"></div>
+      <div class="container continer--five">
+        <div class="traning-content">
+          <div class="traning-content__description">
+            <h4 class="column-title">Surf Training<span class="column-title__shadow-text">01</span></h4>
+            <p class="column-description">By better understanding the various aspects of surfing, By better understanding the various aspects of surfing, you will improve faster and have more fun in the water.</p><a class="column-link" href="#">read more</a>
+          </div>
+          <div class="traning-content__image"><img src="img/main-page/teach/teach.jpg"/></div>
+        </div>
+      </div>
     </section>
-    <section class="section-six"></section>
-    <!--section.section-contact
-    div.container.container--contact
-    	div.container-inner
-    		.column.column--two-items
-    
-    
-    
-    			.form-block
-    				.card
-    					h1.title Register
-    						.close
-    					form
-    						+input('text', 'Name')
-    						+input('email', 'Email')
-    						+input('text', 'Subject')
-    						+textarea('30','5' ,'Message')
-    						+button('Send message')
-    
-    
-    			//.row
-    				.col-xs-12.col-sm-12.col-md-12.col-lg-12.text-center
-    					h2 Contact
-    			//.row
-    				.col-xs-6.col-sm-6.col-md-6.col-lg-6.col-xs-offset-3
-    					form#contact-form.form(action='#', method='POST', role='form')
-    						.form-group
-    							label.form-label(for='name') Your Name
-    							input#name.form-control(type='text', name='name', placeholder='Your name', tabindex='1', required='')
-    						.form-group
-    							label.form-label(for='email') Your Email
-    							input#email.form-control(type='email', name='email', placeholder='Your Email', tabindex='2', required='')
-    						.form-group
-    							label.form-label(for='subject') Subject
-    							input#subject.form-control(type='text', name='subject', placeholder='Subject', tabindex='3')
-    						.form-group
-    							label.form-label(for='message') Message
-    							textarea#message.form-control(rows='5', cols='50', name='message', placeholder='Message...', tabindex='4', required='')
-    						.text-center
-    							button.btn-main(type='submit') Send Message
-    		.column.column--two-items
-    			h2.column-header lorem
-    			p.column-text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-    			| with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-    			#googleMap.google-map(style='width:100%;height:400px;')
-    			a.btn-main(href='#') button
-    -->
+    <section class="section-six">
+      <div class="container container--six">
+        <div class="point-content">
+          <div class="point-content__image"><img src="img/main-page/join/join.jpg"/></div>
+          <div class="point-content__description">
+            <h4 class="column-title">Point Break<span class="column-title__shadow-text">02</span></h4>
+            <p class="column-description">By better understanding the various aspects of surfing, By better understanding the various aspects of surfing, you will improve faster and have more fun in the water.</p><a class="column-link" href="#">read more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-seventh">
+      <div class="container container--seventh">
+        <div class="vertical-line">
+          <div class="vertical-line__body"></div>
+        </div>
+        <h2 class="title-section">CONTACT US</h2>
+        <p class="container-second-description">Surfing is the most blissful experience you can have<br/>on this planet, a taste of heaven.</p>
+      </div>
+      <div class="container">
+        <form class="form-contact">
+          <div class="form-contact__block">
+            <input class="form-contact__block__input" id="email" name="email" type="email" placeholder="YOUR E-MAIL"/>
+            <!--label(for='email') YOUR E-MAIL-->
+          </div><a class="form-contact__button" type="submit" href="#"><img src="img/main-page/arrow-right.png"/></a>
+        </form>
+      </div>
+    </section>
+    <section class="section-contact">
+      <div class="contact">
+        <div class="contact__map">
+          <div class="google-map" id="googleMap" style="width:100%;height:400px;"></div>
+        </div>
+        <div class="contact__address">
+          <h5 class="contact__address__title">Our Camp</h5>
+          <p class="contact__address__description">CA 91932, USA<br/>Imperial Beach<br/>560 Silver Strand Blvd</p><a class="column-link column-link--contact" href="#">Get in Touch</a>
+        </div>
+      </div>
+    </section>
     <footer class="section-footer">
-      <div class="container"></div>
+      <div class="container">
+        <nav class="navigation navigation--footer"><a class="logo" href="#">
+            <div class="logo-box"><img class="logo-box__image" src="img/logo.png"/><span class="logo-box__text">YOUR<br/>SURFING<br/>TOUR</span></div></a>
+          <ul class="nav-list">
+            <li class="nav-list__item"><a class="nav-list__item__link" href="#">STORIES</a></li>
+            <li class="nav-list__item"><a class="nav-list__item__link" href="#">EVENTS</a></li>
+            <li class="nav-list__item"><a class="nav-list__item__link" href="#">PLACES</a></li>
+            <li class="nav-list__item"><a class="nav-list__item__link" href="#">BOARD</a></li>
+          </ul>
+          <div class="copyright"> 2018 copyright<br/>by DyNick</div>
+        </nav>
+      </div>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")-->
+    <script src="js/libs.min.js"></script>
     <script src="js/plugins/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGpxCwfv7Br94wILKwOy6vuVh7xLyVGAU&amp;callback=myMap"></script>
   </body>
 </html>

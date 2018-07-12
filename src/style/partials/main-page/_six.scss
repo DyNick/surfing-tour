@@ -1,0 +1,17 @@
+//default style
+.section-six{
+	margin-top: 100px;
+}
+
+
+//img style
+.point-content{
+	@include flex-mixin(center, center, row);
+	&__image{
+		width: 67%;
+		@include flex-mixin( center, center, row);
+	}
+	&__description{
+		width: 30%;
+	}
+}

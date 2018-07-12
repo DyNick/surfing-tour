@@ -1,0 +1,72 @@
+//default style
+.section-five{
+	margin-top: 100px;
+}
+
+
+//img style
+.traning-content{
+	@include flex-mixin(center, center, row);
+	&__image{
+		width: 67%;
+		@include flex-mixin( flex-end, center, row);
+	}
+	&__description{
+		width: 30%;
+	}
+}
+
+//description style
+.column-title{
+	font-size: 42px;
+	font-family: $pdb;
+	position: relative;
+	&__shadow-text{
+		font-family: $lsb;
+		color: #f9f9f9;
+		font-size: 130px;
+		position: absolute;
+		top: -60px;
+		left: 0;
+		z-index: -1;
+		opacity: .7;
+	}
+}
+.column-description{
+	color: #8f8f8f;
+	font-size: 14px;
+	line-height: 1.7;
+	font-family: $pl;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.column-link{
+	font-family: $lsb;
+	text-transform: uppercase;
+	font-size: 9px;
+	color: #333;
+	margin-bottom: 10px;
+	position: relative;
+	letter-spacing: 2px;
+	&:hover{
+		color: $blue;
+		cursor: pointer;
+	}
+	&:hover:before{
+		transition: .3s ease all;
+		width: 0;
+	}
+	&:before{
+		content: "";
+		position: absolute;
+		display: block;
+		height: 1px;
+		width: 100%;
+		background-color: $blue;
+		bottom: -3px;
+		left: 0px;
+		transition: .3s ease all;
+
+	}
+}

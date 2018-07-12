@@ -75,6 +75,7 @@ $retina: "(min--moz-device-pixel-ratio: 1.5),
 	color: $color;
 	text-align: center;
 	text-transform: uppercase;
+	box-sizing: border-box;
 }
 
 

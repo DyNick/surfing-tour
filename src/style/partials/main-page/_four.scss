@@ -18,7 +18,6 @@ $gray-lightest: lighten($gray-lighter, 4%);
 .strs-box__img{
   width: 20px;
   height: 20px;
-  object-position: 0px -18px;
   margin-right: 10px;
   position: relative;
   transition: all .4s;
@@ -40,10 +39,46 @@ $gray-lightest: lighten($gray-lighter, 4%);
   transform: translate(-100%, -50%);
   transition: all .4s;
   text-transform: uppercase;
+  font-family: $lsb;
+  font-size: 9px;
   &:hover{
-    color: deepskyblue;
+    color: $blue;
     cursor: pointer;
+    z-index: 1;
   }
+  &:before{
+    content: "";
+    display: block;
+    position: absolute;
+    transition: .3s ease all;
+    top: 0;
+    bottom: 0;
+    width: 0%;
+    left: 0;
+    background-color: #fff;
+    z-index: -1;
+  }
+  &:after{
+    content: "";
+    display: block;
+    position: absolute;
+    transition: .3s ease all;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: -1;
+  }
+
+}
+.btn--block:hover:before{
+  width: 50%;
+  transition: .3s ease all;
+}
+.btn--block:hover:after{
+  width: 50%;
+  transition: .3s ease all;
 }
 
 .cards__item:hover .btn--block {
@@ -58,9 +93,10 @@ $gray-lightest: lighten($gray-lighter, 4%);
 }
 
 .cards__item:hover .strs-box__img{
-
+  object-position: 0 -10px;
   transform: translateY(-150%);
   transition: all .4s;
+  height: 20px;
 }
 .cards {
   display: flex;
@@ -69,6 +105,7 @@ $gray-lightest: lighten($gray-lighter, 4%);
   margin: 0;
   padding: 0;
   width: 100%;
+  margin-top: 50px;
 }
 
 .cards__item {
@@ -142,7 +179,8 @@ $gray-lightest: lighten($gray-lighter, 4%);
 
 .card__title {
   color: $gray-dark;
-  font-size: 1.25rem;
+  font-size: 18px;
+  font-family: $pdb;
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -151,6 +189,7 @@ $gray-lightest: lighten($gray-lighter, 4%);
 .card__text {
   flex: 1 1 auto;
   font-size: .875rem;
+  font-family: $pdr;
   line-height: 1.3;
   height: 32px;
   overflow: hidden;

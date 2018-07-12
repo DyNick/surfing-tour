@@ -6,6 +6,7 @@ include template/main-page/five
 include template/main-page/six
 include template/main-page/contact
 include template/main-page/main-form
+include template/main-page/seventh
 include template/footer
 include template/header
 
@@ -13,7 +14,7 @@ include template/header
 doctype html
 html(lang="ru")
 	head
-		title= 'Restaurant'
+		title= 'YOUR SURF TOUR'
 		//- meta
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
@@ -32,14 +33,17 @@ html(lang="ru")
 		+first ()
 		+mainform()
 		+second ()
-		+third ()
+		//+third ()
 		+four ()
 		+five ()
 		+six ()
+		+seventh()
 		+contact ()
 		+footer ()
 
-		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+		//script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+		script(src="js/libs.min.js")
 		script(src="js/plugins/owl.carousel.min.js")
 		script(src="js/main.js")
+		script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBGpxCwfv7Br94wILKwOy6vuVh7xLyVGAU&callback=myMap')
 

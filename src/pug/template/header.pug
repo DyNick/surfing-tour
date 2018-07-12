@@ -1,7 +1,6 @@
 
 -var nav = [{url: '#', name: 'STORIES'}, {url: '#', name: 'EVENTS'},{url: '#', name: 'PLACES'},{url: '#', name: 'BOARD'} ];
 mixin navItem(url, name)
-
 	li.nav-list__item
 		a.nav-list__item__link(href=url)= name
 
@@ -21,3 +20,9 @@ mixin header()
 					each i in nav
 						+navItem(i.url, i.name, i.url )
 				block content
+
+				div.contain-form(style="padding: 0")
+					form.search-form(role="search-form")
+						div.search-block-input
+							input#txt-search.search-block__input(type="search" placeholder="Type your search character")
+					div#filter-records.filter-record

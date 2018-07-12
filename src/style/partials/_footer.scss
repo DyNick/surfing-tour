@@ -1,0 +1,19 @@
+.navigation.navigation--footer{
+	@include flex-mixin(center, center, column);
+	margin-top: 50px;
+	margin-bottom: 50px;
+	.logo{
+		margin-bottom: 30px;
+
+	}
+}
+.copyright{
+	font-family: $lsb;
+	text-transform: uppercase;
+	font-size: 9px;
+	color: $blue;
+	margin-top: 30px;
+	text-align: center;
+	line-height: 1.7;
+	margin-left: -38px;
+}
