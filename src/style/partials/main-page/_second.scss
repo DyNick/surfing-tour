@@ -1,6 +1,9 @@
 .section-second {
 	padding-top: 65px;
 	padding-bottom: 130px;
+	@include media-mexin($tablet-media){
+		padding-bottom: 65px;
+	}
 }
 // text style
 .container-second-description{
@@ -9,6 +12,10 @@
 	font-size: 26px;
 	line-height: 38px;
 	color: #333;
+	@include media-mexin ($tablet-media) {
+		line-height: 1.4;
+		font-size: 18px;
+	}
 }
 .container-second-description-name{
 	text-align: center;
@@ -20,22 +27,35 @@
 }
 .vertical-line{
 	position: relative;
-
 	height: 200px;
 	@include flex-mixin(center, center, row);
+	@include media-mexin ($tablet-media) {
+		height: 120px;
+	}
 	&__body{
 		height: 100px;
 		width: 1px;
 		background-color: $blue;
+		@include media-mexin ($tablet-media) {
+			height: 60px;
+		}
 	}
 }
 .container--second-next{
 	display: grid;
 	grid-template-columns: 40% 60%;
+	@include media-mexin($tablet-media){
+		@include flex-mixin(center, center, column-reverse);
+	}
 }
 //image style
 .video-image-block{
 	position: relative;
+	& img{
+		@include media-mexin($tablet-media){
+			display: none;
+		}
+	}
 	&__text{
 		color: #8f8f8f;
 		font-size: 14px;
@@ -45,6 +65,10 @@
 		width: 380px;
 		margin-left: 65px;
 		margin-bottom: 40px;
+		@include media-mexin($tablet-media){
+			width: 100%;
+			margin: 15px 0;
+		}
 	}
 	&__link{
 		font-family: $lsb;
@@ -55,6 +79,9 @@
 		position: relative;
 		margin-left: 65px;
 		letter-spacing: 2px;
+		@include media-mexin($tablet-media){
+			margin-left: 0;
+		}
 		&:hover{
 			color: $blue;
 			cursor: pointer;
@@ -82,6 +109,9 @@
 	margin-top: 80px;
 	position: relative;
 	z-index: 1;
+	@include media-mexin($tablet-media){
+		margin-top: 20px;
+	}
 }
 
 .video-wrapper{

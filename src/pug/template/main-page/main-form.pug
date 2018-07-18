@@ -1,5 +1,5 @@
 mixin mainform
-	section.mainform
+	section#search.mainform
 		div.vertical-line
 			div.vertical-line__body
 		div.container.container--mainform
@@ -7,27 +7,27 @@ mixin mainform
 				br
 				| on this planet, a taste of heaven.
 			p.container-second-description-name
-			h2.title-section SEARCH TOUR
+			h2.title-section BOOK TOUR
 			p.sub-title-section-second Find your dream tour today!
 			div.mainform-content
 				form.main-form(onsubmit="return false")
 					div.main-form__block
 						select#country.main-form__block__select.form-signup(name='country')
-							option(value='')
-						label(for='country') Select Country
+							option(value='') Select country
+						//label(for='country') Select Country
 					div.main-form__block
 						select#state.main-form__block__select.form-signup(name='state')
-							option(value='')
-						label(for='state') Select State
+							option(value='') Select State
+						//label(for='state') Select State
 
 					div.main-form__block
 						select#city.main-form__block__select.form-signup(name='city')
-							option(value='')
-						label(for='city') Select City
+							option(value='') Select City
+						//label(for='city') Select City
 
 					div.main-form__block
 						select#date.main-form__block__select.form-signup(name='date')
-							option(value='')
+							option(value='') Select Date
 							option(value='') January
 							option(value='') February
 							option(value='') March
@@ -40,15 +40,17 @@ mixin mainform
 							option(value='') October
 							option(value='') November
 							option(value='') December
-						label(for='date') Select Date
-					button.search-main-form(type='submit') find tour
+						//label(for='date') Select Date
+					div.main-form__block.main-form__block--input
+						input#email-main.main-form__block__select.form-signup( placeholder='Email')
+						//label(for='email-main') EMAIL
+					div.main-form__block.main-form__block--input
+						input#name.main-form__block__select.form-signup(placeholder='Name')
+						//label(for='name') NAME
 
-			//div.mainform-content
-				div.mainform-content__image-box
-					img.mainform-content__image-box__img(src='img/main-page/tours/tour1.jpg')
-			//div.mainform-content
-				div.mainform-content__image-box
-					img.mainform-content__image-box__img(src='img/main-page/tours/tour2.jpg')
+					button.search-main-form(type='submit') book tour
+
+
 
 
 

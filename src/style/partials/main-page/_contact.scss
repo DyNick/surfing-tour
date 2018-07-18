@@ -1,11 +1,31 @@
+.section-contact{
+	@include media-mexin($tablet-media){
+		padding: 0 10px;
+		box-sizing: border-box;
+	}
+}
 .contact{
 	width: 100%;
 	@include flex-mixin(center, center, row);
+	@include media-mexin ($tablet-media) {
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
 	&__map{
 		width: 50%;
+		@include media-mexin ($tablet-media) {
+			width: 100%;
+			margin-bottom: 30px;
+		}
 	}
 	&__address{
-		width: 50%;
+		width: 47%;
+		margin-left: 3%;
+		@include media-mexin ($tablet-media) {
+			width: calc(100% - 20px);
+			padding: 0 10px;
+			box-sizing: border-box;
+		}
 		&__description{
 			font-family: $pdb;
 			font-size: 32px;
@@ -20,9 +40,19 @@
 			font-size: 9px;
 			color: #8f8f8f;
 			letter-spacing: 6px;
+			@include media-mexin ($tablet-media) {
+				margin-left: 0;
+			}
 		}
 	}
 }
 .column-link--contact{
 	margin-left: -30px;
+	@include media-mexin ($tablet-media) {
+		width: 100%;
+		margin-left: 0;
+	}
+}
+#googleMap{
+	filter: grayscale(100%);
 }

@@ -1,14 +1,32 @@
 
--var nav = [{url: '#', name: 'STORIES'}, {url: '#', name: 'EVENTS'},{url: '#', name: 'PLACES'},{url: '#', name: 'BOARD'} ];
+-var nav = [{url: '#search', name: 'SEARCH TOUR'}, {url: '#popular', name: 'POPULAR TOURS'},{url: '#contact', name: 'CONTACTS'},{url: 'gallery.html', name: 'GALLERY'} ];
 mixin navItem(url, name)
 	li.nav-list__item
 		a.nav-list__item__link(href=url)= name
 
 mixin header()
 	header.header
+		div.mobile-navigation
+			div.mobile-navigation__inner
+				span.close-button.close-popup-menu
+					.in
+						.close-button-block
+						.close-button-block
+					.out
+						.close-button-block
+						.close-button-block
+				ul.nav-list.nav-list--mobile
+					each i in nav
+						+navItem(i.url, i.name, i.url )
+				block content
+
 		div.container.container--header
 			nav.navigation
-				a.logo(href='#')
+				div.hamburger
+					div.top-bun
+					div.meat
+					div.bottom-bun
+				a.logo(href='/')
 					div.logo-box
 						img.logo-box__image(src='img/logo.png')
 						span.logo-box__text YOUR
@@ -16,7 +34,7 @@ mixin header()
 							|SURFING
 							br
 							|TOUR
-				ul.nav-list
+				ul.nav-list.nav-list--dectop
 					each i in nav
 						+navItem(i.url, i.name, i.url )
 				block content

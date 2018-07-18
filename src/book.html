@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>YOUR SURF TOUR</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/plugins/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/plugins/owl.theme.default.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <!-- FAVICON-->
+    <link rel=" icon" type="image/x-icon" href="favicon.ico">
+    <!--FAVICON:END-->
+  </head>
+  <body>
+    <header class="header">
+      <div class="mobile-navigation">
+        <div class="mobile-navigation__inner"><span class="close-button close-popup-menu">
+            <div class="in">
+              <div class="close-button-block"></div>
+              <div class="close-button-block"></div>
+            </div>
+            <div class="out">
+              <div class="close-button-block"></div>
+              <div class="close-button-block"></div>
+            </div></span>
+          <ul class="nav-list nav-list--mobile">
+            <li class="nav-list__item"><a class="nav-list__item__link" href="#search">SEARCH TOUR</a></li>
+            <li class="nav-list__item"><a class="nav-list__item__link" href="#popular">POPULAR TOURS</a></li>
+            <li class="nav-list__item"><a class="nav-list__item__link" href="#contact">CONTACTS</a></li>
+            <li class="nav-list__item"><a class="nav-list__item__link" href="gallery.html">GALLERY</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container container--header">
+        <nav class="navigation">
+          <div class="hamburger">
+            <div class="top-bun"></div>
+            <div class="meat"></div>
+            <div class="bottom-bun"></div>
+          </div><a class="logo" href="/">
+            <div class="logo-box"><img class="logo-box__image" src="img/logo.png"/><span class="logo-box__text">YOUR<br/>SURFING<br/>TOUR</span></div></a>
+          <ul class="nav-list nav-list--dectop">
+            <li class="nav-list__item"><a class="nav-list__item__link" href="#search">SEARCH TOUR</a></li>
+            <li class="nav-list__item"><a class="nav-list__item__link" href="#popular">POPULAR TOURS</a></li>
+            <li class="nav-list__item"><a class="nav-list__item__link" href="#contact">CONTACTS</a></li>
+            <li class="nav-list__item"><a class="nav-list__item__link" href="gallery.html">GALLERY</a></li>
+          </ul>
+          <div class="contain-form" style="padding: 0">
+            <form class="search-form" role="search-form">
+              <div class="search-block-input">
+                <input class="search-block__input" id="txt-search" type="search" placeholder="Type your search character"/>
+              </div>
+            </form>
+            <div class="filter-record" id="filter-records"></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section class="mainform" id="search">
+      <div class="vertical-line">
+        <div class="vertical-line__body"></div>
+      </div>
+      <div class="container container--mainform">
+        <p class="container-second-description">Surfing is the most blissful experience you can have<br/>on this planet, a taste of heaven.</p>
+        <p class="container-second-description-name"></p>
+        <h2 class="title-section">BOOK TOUR</h2>
+        <p class="sub-title-section-second">Find your dream tour today!</p>
+        <div class="mainform-content">
+          <form class="main-form" onsubmit="return false">
+            <div class="main-form__block">
+              <select class="main-form__block__select form-signup" id="country" name="country">
+                <option value="">Select country</option>
+              </select>
+              <!--label(for='country') Select Country-->
+            </div>
+            <div class="main-form__block">
+              <select class="main-form__block__select form-signup" id="state" name="state">
+                <option value="">Select State</option>
+              </select>
+              <!--label(for='state') Select State-->
+            </div>
+            <div class="main-form__block">
+              <select class="main-form__block__select form-signup" id="city" name="city">
+                <option value="">Select City</option>
+              </select>
+              <!--label(for='city') Select City-->
+            </div>
+            <div class="main-form__block">
+              <select class="main-form__block__select form-signup" id="date" name="date">
+                <option value="">Select Date</option>
+                <option value="">January</option>
+                <option value="">February</option>
+                <option value="">March</option>
+                <option value="">April</option>
+                <option value="">May</option>
+                <option value="">June</option>
+                <option value="">July</option>
+                <option value="">August</option>
+                <option value="">September</option>
+                <option value="">October</option>
+                <option value="">November</option>
+                <option value="">December</option>
+              </select>
+              <!--label(for='date') Select Date-->
+            </div>
+            <div class="main-form__block main-form__block--input">
+              <input class="main-form__block__select form-signup" id="email-main" placeholder="Email"/>
+              <!--label(for='email-main') EMAIL-->
+            </div>
+            <div class="main-form__block main-form__block--input">
+              <input class="main-form__block__select form-signup" id="name" placeholder="Name"/>
+              <!--label(for='name') NAME-->
+            </div>
+            <button class="search-main-form" type="submit">book tour</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="section-footer">
+      <div class="container">
+        <nav class="navigation navigation--footer"><a class="logo" href="#">
+            <div class="logo-box"><img class="logo-box__image" src="img/logo.png"/><span class="logo-box__text">YOUR<br/>SURFING<br/>TOUR</span></div></a>
+          <div class="copyright"> 2018 Copyright by DyNick</div>
+        </nav>
+      </div>
+    </footer>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

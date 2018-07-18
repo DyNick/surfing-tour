@@ -17,4 +17,5 @@ function myMap()
         position: myCenter,
     });
     marker.setMap(map);
+
 }

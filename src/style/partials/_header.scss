@@ -6,11 +6,36 @@
 	display: grid ;
 	grid-template-columns: 22% 53% 25%;
 	position: relative;
+
+	@include media-mexin ($desktop-media) {
+		grid-template-columns: 8% 52% 40%;
+	}
+	@include media-mexin ($medium-media) {
+		grid-template-columns: 15% 15% 70%;
+	}
+
 }
 .nav-list{
 	@include flex-mixin(flex-start, center, row) ;
+
+	&--dectop{
+
+		@include media-mexin ($desktop-media) {
+			display: none;
+		}
+	}
+	&--mobile{
+		display: block;
+	}
+
 	&__item{
 		margin-right: 50px;
+		@include media-mexin ($desktop-media) {
+			margin-right: 0;
+			margin-top: 40px;
+			text-align: center;
+		}
+
 		&__link{
 			color: #333;
 			font-family: $lsb;
@@ -18,6 +43,9 @@
 			font-size: 9px;
 			position: relative;
 			transition: .3s ease all;
+			@include media-mexin ($desktop-media) {
+				font-size: 15px;
+			}
 			&:before{
 				content: "";
 				transition: .3s ease all;
@@ -73,6 +101,12 @@
 	right: 0;
 	background: #fff;
 	width: 25%;
+	@include media-mexin ($desktop-media) {
+		width: 40%;
+	}
+	@include media-mexin ($medium-media) {
+		width: 70%;
+	}
 }
 
 
@@ -150,4 +184,181 @@
 .search-result__link:hover:before{
 	transition: .3s ease all;
 	width: 100%;
+}
+
+//hamburger
+/*===============================*/
+
+.hamburger{
+	display: none;
+	align-self: center;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 30px;
+	height: 20px;
+	cursor: pointer;
+	@media(max-width: $desktop-width){
+		display: flex;
+	}
+
+	div{
+		align-self: flex-end;
+		height: 2px;
+		width: 100%;
+		background: $blue;
+	}
+	.meat{
+		width: 75%;
+		transition: all 200ms ease-in-out;
+	}
+	.bottom-bun{
+		width: 50%;
+		transition: all 400ms ease-in-out;
+	}
+	&:hover{
+		div{
+			width: 100%;
+		}
+		.top-bun{
+			animation: burger-hover 1s infinite ease-in-out alternate;
+		}
+		.meat{
+			animation: burger-hover 1s infinite ease-in-out alternate forwards 200ms;
+		}
+		.bottom-bun{
+			animation: burger-hover 1s infinite ease-in-out alternate forwards 400ms;
+		}
+	}
+}
+//Animation Keyframes
+@keyframes burger-hover{
+	0%{
+		width: 100%;
+	}
+	50%{
+		width: 50%;
+	}
+	100%{
+		width: 100%;
+	}
+}
+
+//mobile menu
+.mobile-navigation {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 12;
+	background: rgba(0, 0, 0, .3);
+	color: $blue;
+	@include flex-mixin(center, center, column);
+	transition: 1.2s ease all;
+	transform: translateX(-100%);
+	&__inner{
+		position: fixed;
+		top: 0;
+		right: 20%;
+		bottom: 0;
+		left: 0;
+		z-index: 12;
+		background: #fff;
+		color: $blue;
+		@include flex-mixin(center, center, column);
+	}
+	&.is-visible {
+		display: block;
+		transition: 1.2s ease all;
+		transform: translateX(0);
+
+	}
+}
+//close icon
+$button-size: 40px;
+$close-width: ($button-size / 10);
+.close-button {
+	display: block;
+	width: $button-size;
+	height: $button-size;
+	position: absolute;
+	overflow: hidden;
+	top: 15px;
+	right: 15px;
+	&:hover{
+		cursor: pointer;
+	}
+	> div {
+		position: relative;
+	}
+	&-block {
+		width: 40px;
+		height: 20px;
+		position: relative;
+		overflow: hidden;
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: calc(55% - 4px);
+			display: block;
+			width: 4px;
+			height: 25px;
+			transform-origin: bottom center;
+			background: $blue;
+			transition: all ease-out 280ms;
+		}
+		&:last-of-type {
+			transform: rotate(180deg);
+		}
+	}
+	.in {
+		.close-button-block {
+			&:before {
+				transition-delay: 280ms;
+				transform: translateX(20px) translateY(-20px) rotate(45deg);
+			}
+			&:after {
+				transition-delay: 280ms;
+				transform: translateX(-22px) translateY(-22px) rotate(-45deg);
+			}
+		}
+	}
+	.out {
+		position: absolute;
+		top: 0;
+		left: 0;
+		.close-button-block {
+			&:before {
+				transform: translateX(-5px) translateY(5px) rotate(45deg);
+			}
+			&:after {
+				transform: translateX(5px) translateY(5px) rotate(-45deg);
+			}
+		}
+	}
+	&:hover {
+		.in {
+			.close-button-block {
+				&:before {
+					transform: translateX(-5px) translateY(5px) rotate(45deg);
+				}
+				&:after {
+					transform: translateX(5px) translateY(5px) rotate(-45deg);
+				}
+			}
+		}
+		.out {
+			.close-button-block {
+				&:before {
+					transform: translateX(-20px) translateY(20px) rotate(45deg);
+				}
+				&:after {
+					transform: translateX(20px) translateY(20px) rotate(-45deg);
+				}
+			}
+		}
+	}
 }

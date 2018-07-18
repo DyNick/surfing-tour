@@ -15,14 +15,37 @@
   </head>
   <body>
     <header class="header">
+      <div class="mobile-navigation">
+        <div class="mobile-navigation__inner"><span class="close-button close-popup-menu">
+            <div class="in">
+              <div class="close-button-block"></div>
+              <div class="close-button-block"></div>
+            </div>
+            <div class="out">
+              <div class="close-button-block"></div>
+              <div class="close-button-block"></div>
+            </div></span>
+          <ul class="nav-list nav-list--mobile">
+            <li class="nav-list__item"><a class="nav-list__item__link" href="#search">SEARCH TOUR</a></li>
+            <li class="nav-list__item"><a class="nav-list__item__link" href="#popular">POPULAR TOURS</a></li>
+            <li class="nav-list__item"><a class="nav-list__item__link" href="#contact">CONTACTS</a></li>
+            <li class="nav-list__item"><a class="nav-list__item__link" href="gallery.html">GALLERY</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="container container--header">
-        <nav class="navigation"><a class="logo" href="#">
+        <nav class="navigation">
+          <div class="hamburger">
+            <div class="top-bun"></div>
+            <div class="meat"></div>
+            <div class="bottom-bun"></div>
+          </div><a class="logo" href="/">
             <div class="logo-box"><img class="logo-box__image" src="img/logo.png"/><span class="logo-box__text">YOUR<br/>SURFING<br/>TOUR</span></div></a>
-          <ul class="nav-list">
-            <li class="nav-list__item"><a class="nav-list__item__link" href="#">STORIES</a></li>
-            <li class="nav-list__item"><a class="nav-list__item__link" href="#">EVENTS</a></li>
-            <li class="nav-list__item"><a class="nav-list__item__link" href="#">PLACES</a></li>
-            <li class="nav-list__item"><a class="nav-list__item__link" href="#">BOARD</a></li>
+          <ul class="nav-list nav-list--dectop">
+            <li class="nav-list__item"><a class="nav-list__item__link" href="#search">SEARCH TOUR</a></li>
+            <li class="nav-list__item"><a class="nav-list__item__link" href="#popular">POPULAR TOURS</a></li>
+            <li class="nav-list__item"><a class="nav-list__item__link" href="#contact">CONTACTS</a></li>
+            <li class="nav-list__item"><a class="nav-list__item__link" href="gallery.html">GALLERY</a></li>
           </ul>
           <div class="contain-form" style="padding: 0">
             <form class="search-form" role="search-form">
@@ -61,66 +84,6 @@
         </div>
       </div>
     </section>
-    <section class="mainform">
-      <div class="vertical-line">
-        <div class="vertical-line__body"></div>
-      </div>
-      <div class="container container--mainform">
-        <p class="container-second-description">Surfing is the most blissful experience you can have<br/>on this planet, a taste of heaven.</p>
-        <p class="container-second-description-name"></p>
-        <h2 class="title-section">SEARCH TOUR</h2>
-        <p class="sub-title-section-second">Find your dream tour today!</p>
-        <div class="mainform-content">
-          <form class="main-form" onsubmit="return false">
-            <div class="main-form__block">
-              <select class="main-form__block__select form-signup" id="country" name="country">
-                <option value=""></option>
-              </select>
-              <label for="country">Select Country</label>
-            </div>
-            <div class="main-form__block">
-              <select class="main-form__block__select form-signup" id="state" name="state">
-                <option value=""></option>
-              </select>
-              <label for="state">Select State</label>
-            </div>
-            <div class="main-form__block">
-              <select class="main-form__block__select form-signup" id="city" name="city">
-                <option value=""></option>
-              </select>
-              <label for="city">Select City</label>
-            </div>
-            <div class="main-form__block">
-              <select class="main-form__block__select form-signup" id="date" name="date">
-                <option value=""></option>
-                <option value="">January</option>
-                <option value="">February</option>
-                <option value="">March</option>
-                <option value="">April</option>
-                <option value="">May</option>
-                <option value="">June</option>
-                <option value="">July</option>
-                <option value="">August</option>
-                <option value="">September</option>
-                <option value="">October</option>
-                <option value="">November</option>
-                <option value="">December</option>
-              </select>
-              <label for="date">Select Date</label>
-            </div>
-            <button class="search-main-form" type="submit">find tour</button>
-          </form>
-        </div>
-        <!--div.mainform-content
-        div.mainform-content__image-box
-        	img.mainform-content__image-box__img(src='img/main-page/tours/tour1.jpg')
-        -->
-        <!--div.mainform-content
-        div.mainform-content__image-box
-        	img.mainform-content__image-box__img(src='img/main-page/tours/tour2.jpg')
-        -->
-      </div>
-    </section>
     <section class="section-second">
       <div class="container container--second">
         <p class="container-second-description">Surfing is the most blissful experience you can have<br/>on this planet, a taste of heaven.</p>
@@ -139,7 +102,7 @@
       </div>
     </section>
     <!--+third ()-->
-    <section class="section-four">
+    <section class="section-four" id="popular">
       <div class="container container--tour">
         <p class="sub-title-section">Take a Look at Our</p>
         <h2 class="title-section">Most popular tour</h2>
@@ -152,7 +115,15 @@
               </div>
               <div class="card__content">
                 <div class="card__title">Some title</div>
-                <p class="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third</p>
+                <p class="card__text">
+                  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third
+                  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third
+                  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third
+                  This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a
+                  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third
+                  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third
+                </p>
+                <p class="price">from 1200$</p>
               </div>
             </div>
           </li>
@@ -163,7 +134,15 @@
               <button class="btn btn--block card__btn">MORE DETAILS</button>
               <div class="card__content">
                 <div class="card__title">Some title</div>
-                <p class="card__text">This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a</p>
+                <p class="card__text">
+                  This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a
+                  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third
+                  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third
+                  This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a
+                  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third
+                  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third
+                </p>
+                <p class="price">from 1200$</p>
               </div>
             </div>
           </li>
@@ -175,7 +154,15 @@
               </div>
               <div class="card__content">
                 <div class="card__title">Some title</div>
-                <p class="card__text">This defines the ability for a flex item to shrink if necessary. Negative numbers are invalid.</p>
+                <p class="card__text">
+                  This defines the ability for a flex item to shrink if necessary. Negative numbers are invalid.
+                  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third
+                  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third
+                  This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a
+                  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third
+                  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third
+                </p>
+                <p class="price">from 1200$</p>
               </div>
             </div>
           </li>
@@ -187,7 +174,15 @@
               </div>
               <div class="card__content">
                 <div class="card__title">Some title</div>
-                <p class="card__text">This defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, </p>
+                <p class="card__text">
+                  This defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem,
+                  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third
+                  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third
+                  This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a
+                  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third
+                  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third
+                </p>
+                <p class="price">from 1200$</p>
               </div>
             </div>
           </li>
@@ -199,7 +194,15 @@
               </div>
               <div class="card__content">
                 <div class="card__title">Some title</div>
-                <p class="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third</p>
+                <p class="card__text">
+                  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third
+                  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third
+                  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third
+                  This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a
+                  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third
+                  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third
+                </p>
+                <p class="price">from 1200$</p>
               </div>
             </div>
           </li>
@@ -210,11 +213,79 @@
               <button class="btn btn--block card__btn">MORE DETAILS</button>
               <div class="card__content">
                 <div class="card__title">Some title</div>
-                <p class="card__text">This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a</p>
+                <p class="card__text">
+                  This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a
+                  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third
+                  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third
+                  This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a
+                  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third
+                  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third
+                </p>
+                <p class="price">from 1200$</p>
               </div>
             </div>
           </li>
         </ul>
+      </div>
+    </section>
+    <section class="mainform" id="search">
+      <div class="vertical-line">
+        <div class="vertical-line__body"></div>
+      </div>
+      <div class="container container--mainform">
+        <p class="container-second-description">Surfing is the most blissful experience you can have<br/>on this planet, a taste of heaven.</p>
+        <p class="container-second-description-name"></p>
+        <h2 class="title-section">BOOK TOUR</h2>
+        <p class="sub-title-section-second">Find your dream tour today!</p>
+        <div class="mainform-content">
+          <form class="main-form" onsubmit="return false">
+            <div class="main-form__block">
+              <select class="main-form__block__select form-signup" id="country" name="country">
+                <option value="">Select country</option>
+              </select>
+              <!--label(for='country') Select Country-->
+            </div>
+            <div class="main-form__block">
+              <select class="main-form__block__select form-signup" id="state" name="state">
+                <option value="">Select State</option>
+              </select>
+              <!--label(for='state') Select State-->
+            </div>
+            <div class="main-form__block">
+              <select class="main-form__block__select form-signup" id="city" name="city">
+                <option value="">Select City</option>
+              </select>
+              <!--label(for='city') Select City-->
+            </div>
+            <div class="main-form__block">
+              <select class="main-form__block__select form-signup" id="date" name="date">
+                <option value="">Select Date</option>
+                <option value="">January</option>
+                <option value="">February</option>
+                <option value="">March</option>
+                <option value="">April</option>
+                <option value="">May</option>
+                <option value="">June</option>
+                <option value="">July</option>
+                <option value="">August</option>
+                <option value="">September</option>
+                <option value="">October</option>
+                <option value="">November</option>
+                <option value="">December</option>
+              </select>
+              <!--label(for='date') Select Date-->
+            </div>
+            <div class="main-form__block main-form__block--input">
+              <input class="main-form__block__select form-signup" id="email-main" placeholder="Email"/>
+              <!--label(for='email-main') EMAIL-->
+            </div>
+            <div class="main-form__block main-form__block--input">
+              <input class="main-form__block__select form-signup" id="name" placeholder="Name"/>
+              <!--label(for='name') NAME-->
+            </div>
+            <button class="search-main-form" type="submit">book tour</button>
+          </form>
+        </div>
       </div>
     </section>
     <section class="section-five">
@@ -256,14 +327,14 @@
         </form>
       </div>
     </section>
-    <section class="section-contact">
+    <section class="section-contact" id="contact">
       <div class="contact">
         <div class="contact__map">
           <div class="google-map" id="googleMap" style="width:100%;height:400px;"></div>
         </div>
         <div class="contact__address">
           <h5 class="contact__address__title">Our Camp</h5>
-          <p class="contact__address__description">CA 91932, USA<br/>Imperial Beach<br/>560 Silver Strand Blvd</p><a class="column-link column-link--contact" href="#">Get in Touch</a>
+          <p class="contact__address__description">Chicago 91932, USA<br/>Imperial Beach<br/>560 Silver Strand Blvd</p><a class="column-link column-link--contact" href="#">Get in Touch</a>
         </div>
       </div>
     </section>
@@ -271,13 +342,7 @@
       <div class="container">
         <nav class="navigation navigation--footer"><a class="logo" href="#">
             <div class="logo-box"><img class="logo-box__image" src="img/logo.png"/><span class="logo-box__text">YOUR<br/>SURFING<br/>TOUR</span></div></a>
-          <ul class="nav-list">
-            <li class="nav-list__item"><a class="nav-list__item__link" href="#">STORIES</a></li>
-            <li class="nav-list__item"><a class="nav-list__item__link" href="#">EVENTS</a></li>
-            <li class="nav-list__item"><a class="nav-list__item__link" href="#">PLACES</a></li>
-            <li class="nav-list__item"><a class="nav-list__item__link" href="#">BOARD</a></li>
-          </ul>
-          <div class="copyright"> 2018 copyright<br/>by DyNick</div>
+          <div class="copyright"> 2018 Copyright by DyNick</div>
         </nav>
       </div>
     </footer>

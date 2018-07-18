@@ -10,19 +10,36 @@
 	border: 1px solid #8f8f8f;
 	padding: 20px;
 	box-sizing: border-box;
-	@include flex-mixin(space-betweean,center,row);
+	width: 450px;
+	margin: 0 auto;
+	@include flex-mixin(space-betweean,center,column);
+	@include media-mexin($tablet-media){
+		flex-wrap: wrap;
+		width: 100%;
+	}
 
 }
 .main-form__block{
 	display: block;
 	position: relative;
-	width: 45%;
+	width: 90%;
 	z-index: 1;
 	background: transparent;
 	border: none;
+	margin-bottom: 20px;
+	@include media-mexin($tablet-media){
+		width: 100%;
+		margin-bottom: 20px;
+	}
 	.error {
 		border-bottom-color: red;
 		animation: error-animate .5s;
+	}
+	&--input{
+		&:before{
+			content: "";
+			border-color: transparent!important;
+		}
 	}
 	&:before{
 		background: none;
@@ -34,8 +51,8 @@
 		height: 0;
 		pointer-events: none;
 		position: absolute;
-		right: 10%;
-		bottom: 8px;
+		right: 10px;
+		bottom: 14px;
 		width: 0;
 		z-index: 1;
 	}
@@ -49,16 +66,21 @@
 	}
 }
 .search-main-form{
-	width: 40%;
-	height: 30px;
+	width: 90%;
+	height: 37px;
 	text-transform: uppercase;
 	border: 1px solid $blue;
 	box-sizing: border-box;
 	background: transparent;
 	color: $blue;
 	position: relative;
-	line-height: 30px;
+	line-height: 37px;
 	transition: .3s ease all;
+		@include media-mexin($tablet-media){
+		width: 100%;
+
+	}
+
 	&:before{
 		content: "";
 		display: block;
@@ -98,7 +120,8 @@
 	transition: .3s ease all;
 }
 
-.main-form__block > select + label {
+.main-form__block > select + label,
+.main-form__block > input + label {
 	position: absolute;
 	font-family: $lsb;
 	font-size: 9px;
@@ -111,17 +134,24 @@
 	transition: .15s ease-out all;
 }
 .main-form__block__select:focus + label,
-select.focusFancy + label{
+select.focusFancy + label,
+.main-form__block__select:focus + input,
+.focusFancy + label{
 	top: 10px;
 	font-family: $lsb;
 	font-size: 9px;
 	color: $blue;
 }
-
-select {
+.form-signup{
+	padding: 10px;
+	font-size: 12px;
+	line-height: 13px;
+}
+select,
+input{
 	appearance: none;
 	background: transparent;
-	border: 0 none;
+	border: 1px solid #8f8f8f;
 	border-radius: 0 !important;
 	box-shadow: none;
 	color: #8f8f8f;
@@ -131,12 +161,14 @@ select {
 	margin: 0 auto;
 	outline: none;
 	text-overflow: ellipsis;
-	width: 90%;
+	width: 100%;
 	user-select: none;
-	border-bottom: 1px solid #8f8f8f;
 	font-size: 9px;
-	padding: 17px 20px 3px 0;
-
+	padding: 17px 20px 3px 10px;
+	box-sizing: border-box;
+	@include media-mexin($tablet-media){
+		width: 100%;
+	}
 }
 
 // image style

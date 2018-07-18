@@ -36,23 +36,18 @@ $mobile-big-width: 480px;
 $mobile-small-width: 320px;
 
 
-$small-media: "screen and (max-width: $mobile-small-width)" ;
-$medium-media: "screen and (max-width: $mobile-big-width)" ;
-$tablet-media: "screen and (max-width: $tablet-width)" ;
-$desktop-media: "screen and (max-width: $desktop-width)" ;
-$container-media: "screen and (max-width: $container-width)" ;
-$non-retina: "screen and (-webkit-max-device-pixel-ratio: 1)" ;
-$retina: "(min--moz-device-pixel-ratio: 1.5),
-                    (-o-min-device-pixel-ratio: 3/2),
-                    (-webkit-min-device-pixel-ratio: 1.5),
-                    (min-device-pixel-ratio: 1.5),
-                    (min-resolution: 144dpi),
-                    (min-resolution: 1.5dppx)" ;
+$small-media: "(max-width: #{$mobile-small-width})" ;
+$medium-media: " (max-width: #{$mobile-big-width})" ;
+$tablet-media: "(max-width: #{$tablet-width})" ;
+$desktop-media: "(max-width: #{$desktop-width})" ;
+$desktop-min--media: "(max-width: #{$desktop-min-width})" ;
+$container-media: "(max-width: #{$container-width})" ;
+
 
 
 //Mixins
 
-@mixin respond-to($media) {
+@mixin media-mexin($media) {
 	@media only screen and #{$media} {
 		@content;
 	}
@@ -79,8 +74,14 @@ $retina: "(min--moz-device-pixel-ratio: 1.5),
 }
 
 
-//default style
+//default
 .container{
 	width: $container-width;
 	margin: 0 auto;
+
+	@include media-mexin ($container-media) {
+		width: calc(100% - 20px);
+		padding: 0 10px;
+	}
+
 }

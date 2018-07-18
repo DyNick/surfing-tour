@@ -7,7 +7,7 @@ $(document).ready(function() {
         var html_code = '';
 
         $.getJSON('country_state_city.json', function(data) {
-            html_code += '<option value=""></option>';
+            html_code += '<option value="">Select '+id+'</option>';
 
             $.each(data, function(key, value) {
 
@@ -59,7 +59,7 @@ $(document).ready(function() {
 
 $(function() {
 
-    $(' .main-form__block select').focusout(function() {
+    $('.form-signup').focusout(function() {
 
         var focusFancy = $(this).val();
 
@@ -78,6 +78,7 @@ $(function() {
 
             if($this.val().length === 0)
                 $this.addClass('error');
+
 
         })
 

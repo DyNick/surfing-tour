@@ -6,6 +6,10 @@
 	line-height: 38px;
 	color: #333;
 	margin-bottom: 65px;
+	@include media-mexin ($medium-media) {
+		font-size: 18px;
+		line-height: 1.4;
+	}
 }
 .title-section{
 	font-family: $pdb;
@@ -13,6 +17,9 @@
 	text-align: center;
 	color: #333;
 	margin-bottom: 20px;
+	@include media-mexin ($medium-media) {
+		font-size: 30px;
+	}
 }
 .sub-title-section{
 	font-family: $lsb;
